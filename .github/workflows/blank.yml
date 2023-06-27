@@ -16,7 +16,6 @@ jobs:
   call-lint-check:
     uses: Security-Knowledge-Framework/GH-actions-markdown-linting/.github/workflows/steps.yml@main
     with:
-      config-path: .github/configs/.markdownlint.json
       ref: ${{ github.head_ref }}
       repository: ${{ github.repository }}
     secrets:
