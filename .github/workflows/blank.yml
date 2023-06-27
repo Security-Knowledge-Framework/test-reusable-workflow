@@ -14,7 +14,7 @@ on:
 
 jobs:
   call-lint-check:
-    uses: Security-Knowledge-Framework/GH-actions-markdown-linting/.github/workflows/steps.yml@main
+    uses: Security-Knowledge-Framework/GH-actions-markdown-linting/.github/workflows/md-lint-check.yml@main
     with:
       ref: refs/pull/${{ github.event.pull_request.number }}/merge
       repository: ${{ github.repository }}
