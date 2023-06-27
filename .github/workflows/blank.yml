@@ -16,7 +16,8 @@ jobs:
   call-lint-check:
     uses: Security-Knowledge-Framework/GH-actions-markdown-linting/.github/workflows/steps.yml@main
     with:
-      ref: ${{ github.head_ref }}
+      ref: refs/pull/${{ github.event.pull_request.number }}/merge
       repository: ${{ github.repository }}
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
+
