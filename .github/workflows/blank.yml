@@ -14,7 +14,7 @@ on:
 
 jobs:
   call-lint-check:
-    uses: your-account/your-repo/.github/workflows/markdown-lint-check.yml@main
+    uses: Security-Knowledge-Framework/GH-actions-markdown-linting/.github/workflows/steps.yml@main
     with:
       config-path: .github/configs/.markdownlint.json
       ref: ${{ github.head_ref }}
