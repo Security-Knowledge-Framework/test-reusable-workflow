@@ -20,4 +20,12 @@ jobs:
       repository: ${{ github.repository }}
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
+      
+  call-spelling-check:
+    uses: Security-Knowledge-Framework/GH-actions-markdown-linting/.github/workflows/md-textlint-check.yml@main
+    with:
+      ref: refs/pull/${{ github.event.pull_request.number }}/merge
+      repository: ${{ github.repository }}
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
 
